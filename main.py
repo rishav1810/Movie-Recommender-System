@@ -3,7 +3,6 @@ import pandas as pd
 from flask import Flask, render_template, request
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import json
 
 def create_sim():
     data = pd.read_csv('C:/Users/hp/Downloads/new 2f/new 2f/main_data.csv')
