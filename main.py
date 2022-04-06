@@ -26,14 +26,14 @@ def rcmd(m):
     if m not in data['movie_title'].unique():
         return('Sorry! This movie is not in our database. Please check the spelling or try with some other movies')
     else:
-        # getting the index of the movie in the dataframe
+        
         i = data.loc[data['movie_title']==m].index[0]
 
         # fetching the row containing similarity scores of the movie
         # from similarity matrix and enumerate it
         lst = list(enumerate(sim[i]))
 
-        # sorting this list in decreasing order based on the similarity score
+        
         lst = sorted(lst, key = lambda x:x[1] ,reverse=True)
 
         # taking top 1- movie scores
