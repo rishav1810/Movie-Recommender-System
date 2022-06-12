@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def create_sim():
-    data = pd.read_csv('C:/Users/hp/Downloads/new 2f/new 2f/main_data.csv')
+    data = pd.read_csv('C:/Users/risha/Downloads/movie_recommendation-main/main_data.csv')
     # creating a count matrix
     cv = CountVectorizer()
     count_matrix = cv.fit_transform(data['comb'])
